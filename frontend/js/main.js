@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const elemento = document.getElementById("table-cliente")
 
             for (let i = 0; i < data.length ; i++){
-                
+                //console.log(data[i]) Muestro en la consola 
             }
         })
 });
