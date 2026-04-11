@@ -19,7 +19,8 @@ public class ClienteService {
     }
 
     //Retorna o recive la lista de todos los clientes
-    public List<Cliente> listarTodos(){
-        return clienteRepository.findAll();
+    public List<Cliente> listarTodos(){ return clienteRepository.findAll();}
+    public void eliminarCliente(long id){
+        clienteRepository.deleteById(id);
     }
 }

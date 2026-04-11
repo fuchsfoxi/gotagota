@@ -3,10 +3,8 @@ package com.senati.gotagota.controller;
 
 import com.senati.gotagota.entity.Cliente;
 import com.senati.gotagota.service.ClienteService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,4 +27,15 @@ public class ClienteController {
     //GET /api/clientes -> devuelve  todos los clientes en formato JSON
     @GetMapping
     public List<Cliente> listar() {return clienteService.listarTodos();}
+
+
+// se esta creando la api de eleminar clientes
+//DELETE /api/clientes /{id} -> elemina un cliente por su ID
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eleminar(@PathVariable long id){
+
+        clienteService.eliminarCliente(id);
+        return  ResponseEntity.noContent().build();
+
+    }
 }
