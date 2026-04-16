@@ -32,7 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
         elemento.innerHTML += fila;
       }
     });
-
+//DOM (document object model)dar accion al boton de guardar cliente 
+ const btnSaveCliente = document.getElementById("btn-crearcliente")
+ btnSaveCliente.addEventListener("click", guardarCliente);
 });
 
 // EVENTO DE CLICK EN JAVASCRIPT
