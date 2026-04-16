@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 //DOM (document object model)dar accion al boton de guardar cliente 
  const btnSaveCliente = document.getElementById("btn-crearcliente")
- btnSaveCliente.addEventListener("click", guardarCliente);
+ btnSaveCliente.addEventListener("click", guardarCliente); 
 });
 
 // EVENTO DE CLICK EN JAVASCRIPT
@@ -63,11 +63,11 @@ document.addEventListener("click", function (e) {
 
 //creano una funcion basica 
 function guardarCliente() {
-  const nombre = document.getElementById("c_nombre");
-  const apellido = document.getElementById("c_apellido");
-  const dni = document.getElementById("c_dni");
-  const telefono = document.getElementById("c_telefono");
-  const direccion = document.getElementById("c_direccion");
+  const nombre = document.getElementById("c_nombre").value;
+  const apellido = document.getElementById("c_apellido").value;
+  const dni = document.getElementById("c_dni").value;
+  const telefono = document.getElementById("c_telefono").value;
+  const direccion = document.getElementById("c_direccion").value;
 
 fetch("http://localhost:8080/api/clientes/",  {
   method: "POST",
