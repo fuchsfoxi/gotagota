@@ -1,7 +1,5 @@
 // EVENTOS EN JAVASCRIPT (CLICK, CARGAR, KEY,)
-
 document.addEventListener("DOMContentLoaded", () => {
-
   fetch("http://localhost:8080/api/clientes")
     .then((response) => response.json())
     .then((data) => {
@@ -20,7 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
                             <td>${cliente.telefono}</td>
                             <td>${cliente.direccion}</td>
                             <td> 
-                                <button class="btn btn-outline-primary me-2">
+                                <button 
+                                  
+                                class="btn btn-outline-primary me-2">
                                     <i class="fas fa-edit"></i> Editar
                                 </button>
                                 <button id="btnEliminar" data-idcliente = ${cliente.id} class="btn btn-outline-danger">
@@ -39,20 +39,39 @@ document.addEventListener("DOMContentLoaded", () => {
 //Creamos una variable que almacene el DOM de ese elemento del boton
 document.addEventListener("click", function (e) {
   const btnDelete = e.target.closest("#btnEliminar");
-    if (btnDelete) { //TRUE o 1
-        alert("Eliminando...");
-        const id = btnDelete.dataset.idcliente;
-        //console.log(id) para en consola que ID es nada mas
-       // fetch(`http://localhost:8080/api/clientes/${id}`, {
-        fetch("http://localhost:8080/api/clientes/"+id, {
-          method: 'DELETE'
-        })
-        .then(response => {
-            if (response.ok) {
-              alert('Cliente eliminado correctamente');
-              location.reload(); // Recargar la página para reflejar los cambios
-            } else {
-              alert('Error al eliminar el cliente');
-        }})
-    }
+  if (btnDelete) { //TRUE o 1
+    alert("Eliminando...");
+    const id = btnDelete.dataset.idcliente;
+    //console.log(id) para en consola que ID es nada mas
+    // fetch(`http://localhost:8080/api/clientes/${id}`, {
+    fetch("http://localhost:8080/api/clientes/" + id, {
+      method: 'DELETE'
+    })
+      .then(response => {
+        if (response.ok) {
+          alert('Cliente eliminado correctamente');
+          location.reload(); // Recargar la página para reflejar los cambios
+        } else {
+          alert('Error al eliminar el cliente');
+        }
+      })
+  }
 });
+
+
+//creano una funcion basica 
+function guardarCliente() {
+  const nombre = document.getElementById("c_nombre");
+  const apellido = document.getElementById("c_apellido");
+  const dni = document.getElementById("c_dni");
+  const telefono = document.getElementById("c_telefono");
+  const direccion = document.getElementById("c_direccion");
+
+fetch("http://localhost:8080/api/clientes/",  {
+  method: "POST",
+  headers:{"conte-Type":"application/json"},
+  body: JSON.stringify({nombre,apellido,dni,telefono,direccion}) 
+      }).then((response) => {
+        console.log(response)
+      });
+}
