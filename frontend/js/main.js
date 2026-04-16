@@ -74,6 +74,11 @@ fetch("http://localhost:8080/api/clientes/",  {
   headers:{"conte-Type":"application/json"},
   body: JSON.stringify({nombre,apellido,dni,telefono,direccion}) 
       }).then((response) => {
+        if(response.ok){
+          location.reload()
+        } else{
+          alert("Error: no se pudo guardar")
+        }
         console.log(response)
       });
 }
