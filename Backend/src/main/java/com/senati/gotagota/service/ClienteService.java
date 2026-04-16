@@ -20,6 +20,11 @@ public class ClienteService {
 
     //Retorna o recive la lista de todos los clientes
     public List<Cliente> listarTodos(){ return clienteRepository.findAll();}
+    //crear un cliente
+    public Cliente crearCliente(Cliente cliente){
+        return clienteRepository.save(cliente);
+    }
+
     public void eliminarCliente(long id){
         clienteRepository.deleteById(id);
     }
