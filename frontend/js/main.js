@@ -84,4 +84,8 @@ function guardarCliente() {
     });
 }
 
-
+//CREAMOS UN FUNCION BASICA 
+function editarCliente(){
+  const nombre = document.getElementById(c_u_nombre).value;
+  
+}
