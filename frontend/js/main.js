@@ -21,7 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <button
                                     class="btn btn-outline-primary me-2"
                                     data-bs-toggle="modal"
-                                    data-bs-target="#modalEditarCliente">
+                                    data-bs-target="#modalEditarCliente"
+                                    data-idcli = ${cliente.id}
+                                    data-nomcli = ${cliente.nombre}
+                                    data- apellcli = ${cliente.apellido}
+                                     data-dni-cli = ${cliente.dni}
+                                     data-telfcli = ${cliente.telefono}
+                                     data-direcli = ${cliente.direccion}
                                     <i class="fas fa-edit"></i> Editar
                                 </button>
                                 <button id="btnEliminar" data-idcliente = ${cliente.id} class="btn btn-outline-danger">
@@ -86,6 +92,6 @@ function guardarCliente() {
 
 //CREAMOS UN FUNCION BASICA 
 function editarCliente(){
-  const nombre = document.getElementById(c_u_nombre).value;
   
+
 }
