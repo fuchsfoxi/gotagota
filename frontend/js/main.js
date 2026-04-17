@@ -19,7 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
                             <td>${cliente.direccion}</td>
                             <td> 
                                 <button
-                                    class="btn btn-outline-primary me-2">
+                                    class="btn btn-outline-primary me-2"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalEditarCliente">
                                     <i class="fas fa-edit"></i> Editar
                                 </button>
                                 <button id="btnEliminar" data-idcliente = ${cliente.id} class="btn btn-outline-danger">
@@ -81,3 +83,5 @@ function guardarCliente() {
         }
     });
 }
+
+
