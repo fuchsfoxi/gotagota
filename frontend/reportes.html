@@ -74,13 +74,10 @@
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>DNI</th>
-                            <th>Telefono</th>
-                            <th>Dirección</th>
-                            <th>Opciones</th>
+                            <th>Tipo_pan</th>
+                            <th>Turno</th>
+                            <th>Cantidad_pan</th>
+                            <th>Cantidad_lata</th>
                         </tr>
                     </thead>
                     <tbody id="table-cliente">
@@ -90,89 +87,6 @@
             </div>
         </div>
     </main>
-
-<!-- Modal REGISTRO DE CLIENTE-->
-<div class="modal fade" id="modalRegistroCliente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-            <form>
-                <div class="mb-3">
-                    <label for="" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="c_nombre" name="nombre" required>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="c_apellido" name="apellido" required>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">DNI</label>
-                    <input type="text" class="form-control" id="c_dni" name="dni" required>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Teléfono</label>
-                    <input type="tel" class="form-control" id="c_telefono" name="telefono" required>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Dirección</label>
-                    <input type="text" class="form-control" id="c_direccion" name="direccion" required>
-                </div>
-            </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" id="btn-crearcliente">Guardar</button>
-      </div>
-    </div>
-  </div>
-</div>
-    
-<!-- Modal EDITAR DE CLIENTE-->
-<div class="modal fade" id="modalEditarCliente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-            <form>
-                <div class="mb-3">
-                    <label for="" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="c_u_nombre" name="nombre" required>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="c_u_apellido" name="apellido" required>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">DNI</label>
-                    <input type="text" class="form-control" id="c_u_dni" name="dni" required>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Teléfono</label>
-                    <input type="tel" class="form-control" id="c_u_telefono" name="telefono" required>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">Dirección</label>
-                    <input type="text" class="form-control" id="c_u_direccion" name="direccion" required>
-                </div>
-            </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" id="btn-Editarcliente">Actualizar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
 
     <script src="js/main.js"></script>
     <script src="js/sidebar.js"></script>
